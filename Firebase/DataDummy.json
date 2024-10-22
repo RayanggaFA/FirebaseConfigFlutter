@@ -1,0 +1,15 @@
+{
+    "User": {
+      "user_id_1": {
+        "nama": "Nama Pengguna 1",
+        "email": "email1@example.com",
+        "password": "hashed_password_1"
+      },
+      "user_id_2": {
+        "nama": "Nama Pengguna 2",
+        "email": "email2@example.com",
+        "password": "hashed_password_2"
+      }
+    }
+  }
+  
