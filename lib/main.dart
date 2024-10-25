@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart'; // Add Firebase core
-import 'login.dart'; // Correct the import for your LoginPage
+import 'login.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized(); // Ensure that Firebase is initialized

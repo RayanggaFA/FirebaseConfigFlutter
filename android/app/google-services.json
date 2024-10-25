@@ -1,66 +1,26 @@
 {
   "project_info": {
-    "project_number": "327512390031",
-    "firebase_url": "https://intimeapp-99a1e-default-rtdb.asia-southeast1.firebasedatabase.app",
-    "project_id": "intimeapp-99a1e",
-    "storage_bucket": "intimeapp-99a1e.appspot.com"
+    "project_number": "119144793422",
+    "project_id": "codelab1-cc14d",
+    "storage_bucket": "codelab1-cc14d.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:327512390031:android:faaad484b302a0445673fa",
-        "android_client_info": {
-          "package_name": "com.example.call_aja"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "327512390031-s9ia4irfs6q3k8mtdru6fp76jcdcc8e0.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAdM1wTo1pYgEdAonD6DjlWGNHVvIfcaA8"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "327512390031-s9ia4irfs6q3k8mtdru6fp76jcdcc8e0.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:327512390031:android:1154e82dc7e520025673fa",
+        "mobilesdk_app_id": "1:119144793422:android:a25b0a9908999d9a1f8a1f",
         "android_client_info": {
           "package_name": "com.example.intime"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "327512390031-s9ia4irfs6q3k8mtdru6fp76jcdcc8e0.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAdM1wTo1pYgEdAonD6DjlWGNHVvIfcaA8"
+          "current_key": "AIzaSyAKb6IN14tQ8LXL2z4DSzfPriOMIM9CAVE"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "327512390031-s9ia4irfs6q3k8mtdru6fp76jcdcc8e0.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }

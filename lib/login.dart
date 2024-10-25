@@ -14,11 +14,11 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
-  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _emailController    = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-  final FirebaseAuth _auth = FirebaseAuth.instance;
-  final GoogleSignIn _googleSignIn = GoogleSignIn();
-  final DatabaseReference _databaseRef = FirebaseDatabase.instance.ref('User');
+  final FirebaseAuth _auth                        = FirebaseAuth.instance;
+  final GoogleSignIn _googleSignIn                = GoogleSignIn();
+  final DatabaseReference _databaseRef            = FirebaseDatabase.instance.ref('User');
 
   bool _isLoading = false;
   Future<void> _login() async {
@@ -58,7 +58,7 @@ class _LoginState extends State<Login> {
         _showAlertDialog('Login gagal', 'Pengguna tidak ditemukan.');
       }
     } catch (e) {
-      print('Login error: $e');
+      print('Login error: ${e.toString()}');
       // Menampilkan AlertDialog jika terjadi kesalahan
       _showAlertDialog('Login gagal', 'Silakan periksa kredensial Anda.');
     } finally {
@@ -110,7 +110,7 @@ void _showAlertDialog(String title, String message) {
         );
       }
     } catch (e) {
-      print('Google Sign In error: $e');
+      print('Google Sign In error: ${e.toString()}');
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
         content: Text('Google Sign In gagal.'),
       ));

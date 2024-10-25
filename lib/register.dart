@@ -13,12 +13,12 @@ class RegisterPage extends StatefulWidget {
 }
 
 class _RegisterPageState extends State<RegisterPage> {
-  final TextEditingController _fullNameController = TextEditingController();
-  final TextEditingController _emailController = TextEditingController();
-  final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _fullNameController        = TextEditingController();
+  final TextEditingController _emailController           = TextEditingController();
+  final TextEditingController _passwordController        = TextEditingController();
   final TextEditingController _confirmPasswordController = TextEditingController();
-  final FirebaseAuth _auth = FirebaseAuth.instance;
-  final GoogleSignIn _googleSignIn = GoogleSignIn();
+  final FirebaseAuth _auth           = FirebaseAuth.instance;
+  final GoogleSignIn _googleSignIn   = GoogleSignIn();
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
   bool _isLoading = false;
@@ -62,16 +62,16 @@ class _RegisterPageState extends State<RegisterPage> {
 
       // Buat pengguna dengan email dan password
       UserCredential userCredential = await _auth.createUserWithEmailAndPassword(
-        email: _emailController.text.trim(),
-        password: _passwordController.text.trim(),
+        email    : _emailController.text.trim(),
+        password : _passwordController.text.trim(),
       );
 
       // Simpan data pengguna ke Firestore
       await _firestore.collection('users').doc(userCredential.user!.uid).set({
         'fullName': _fullNameController.text.trim(),
-        'email': _emailController.text.trim(),
+        'email'   : _emailController.text.trim(),
         'password': hashedPassword,
-        'userId': userCredential.user!.uid, // Menambahkan ID pengguna
+        'userId'  : userCredential.user!.uid, // Menambahkan ID pengguna
       });
 
       // Navigasi ke halaman login
@@ -91,7 +91,7 @@ class _RegisterPageState extends State<RegisterPage> {
           ));
         }
       } else {
-        print('Registration error: $e');
+        print('Registration error: ${e.toString()}');
         ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
           content: Text('Pendaftaran gagal, silakan coba lagi.'),
         ));
@@ -135,8 +135,8 @@ class _RegisterPageState extends State<RegisterPage> {
         if (!userSnapshot.exists) {
           await _firestore.collection('users').doc(uid).set({
             'fullName': googleUser.displayName ?? '',
-            'email': googleUser.email,
-            'userId': uid,
+            'email'   : googleUser.email,
+            'userId'  : uid,
           });
         }
 
@@ -146,7 +146,7 @@ class _RegisterPageState extends State<RegisterPage> {
         );
       }
     } catch (e) {
-      print('Google Sign-In error: $e');
+      print('Google Sign-In error: ${e.toString()}');
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
         content: Text('Google Sign-In gagal, silakan coba lagi.'),
       ));
